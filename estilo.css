@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    padding-top: 10px;
+
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    width: 100%;
+    height: 96vh;
+}
+
+h2 {
+    color: rgb(195, 253, 253);
+    text-align: left;
+}
+
+#container>div {
+    width: 30%;
+    background-color: rgb(120, 251, 179);
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+
+}
+
+.form_cli {
+    display: grid;
+    /*dispoe os elementos em duas dimensões*/
+    gap: 0.4em;
+    /*especifica um espaço de 0.5em entre os elementos*/
+    grid-template-areas:
+        "nome.nome"
+        "email.email"
+        "cpf.cpr"
+        "senha.senha"
+        "password.password"
+        "submit.reset";
+    grid-template-columns: 1fr 0.5em 1fr;
+    margin: 0.5em auto;
+    width: 50%;
+}
+
+label {
+    grid-column: 1;
+    /*coloca tosos os elementos label em  grid coluna 1 */
+    text-align: left;
+    font-size: 0.7em;
+}
+
+input {
+    grid: 1;
+    font-size: 0.7em;
+}
+
+button {
+    grid-area: auto;
+}

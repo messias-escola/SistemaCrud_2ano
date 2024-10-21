@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!--meta name="viewport" content="width=device-width, initial-scale=1.0"-->
+<style>
+* {   box-sizing: border-box; }
+.header{
+  display: flex;
+  flex-wrap: nowrap;
+}
+.header-item{
+  display: flex;
+  flex: 80vw;
+  height: 10vw;
+}
+.item1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+    background: #1add9c;
+    border: #ffff00 solid 1px;
+}
+.item8{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 8;
+  text-align: center;
+  background: #f1f1f1;
+}
+.imagemh{
+  width: 5em;
+  height: 20%;
+  border: #f00 solid 1px; 
+}
+img{    width: 100%;     height: auto;  }
+/*Configuração do texto outline do título do cabeçalho */
+divh {
+  padding-top: 4px;
+  font-size: 11vw;
+  white-space: nowrap;
+  position: absolute;
+}
+.front{    color: white;  }
+.outline{
+  -webkit-text-stroke: 4px black;
+  user-select: none;
+}
+/*Estiliza a barra de navegação*/
+.navbar{
+    margin-top: 2px;
+    display: flex;
+    background-color: #333;
+}
+/*Estiliza os links barra de navegação*/
+.navbar a{
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+/*Altera a cor na passagem do mouse*/
+.navbar a:hover{
+  background: #ddd;
+  color: black;
+}
+/*Container de colunas*/
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*Cria duas colunas lado-a-lado.*/
+/*coluna da esquerda*/
+.side {
+  display: flex;
+  flex:30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  flex-direction: column;
+}
+.localfoto{
+ // height: 50px;
+  width: 100%;
+  padding: 20px;
+  background-color: gray;
+  margin-top: 5px;
+}
+/* Main column */
+.main {
+   flex: 70%;
+  background-color: pink;
+  padding: 20px;
+}
+.footer{
+  padding: 20%
+  text-align: center;
+  background: #ddd;
+}
+/* Layout responsivo: quando a tela tem largura menor que 700px, faça que duas colunas posicione no topo em relação á outra ao invés de ao lado.  */
+@media screen and (max-width: 700px){
+  .row, .navbar{
+    flex-direction: column;
+  }
+.navbar{
+    display: flex;
+    background-color: #f5f;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 1em;
+    font-weight: 800;
+}
+.main {     flex: 70%;     background-color: pink; }
+.row{
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.side{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.localfoto{
+  width: 50%;
+  padding: 20px;
+  background-color: lightgray;
+  margin-top: 5px;
+}
+}
+</style>
+</head>
+<body>
+<div class= "header">
+  <div class="header-item">
+    <div class="item1">
+      <div class="imagemh">
+        <img src="img/funec_logo.png" alt="Logomarca da Funec">
+      </div>
+    </div>
+    <div class="item8">
+      <!-- Texto do header -->
+      <divh class="outline">
+            MEU SITE
+      </divh>
+      <divh class="front">
+            MEU SITE
+      </divh>
+    </div>    
+  </div>
+</div>
+<!--Barra de navegação -->
+<div class = "navbar">
+  <a href="#">Link 1</a>
+  <a href="#">Link 2</a>
+  <a href="#">Link 3</a>
+  <a href="#">Link 4</a>
+</div>
+<div class="row">
+    <div class="side">
+        <h2>Sobre mim</h2>
+        <h5>Minha foto</h5>
+        <div class = "localfoto">Imagem</div>
+        <p> Um texto que acompanha a minha imagem"</p>
+        <div class = "localfoto">Imagem</div>
+        <div class = "localfoto">Imagem</div>
+        <div class = "localfoto">Imagem</div>
+        <div class = "localfoto">Imagem</div>
+    </div>
+    <div class="main">
+      <h2>TÍTULO PRINCIPAL</h2>
+      <h5> Descrição do artigo  - Data: 07/12/2020</h5>
+      <div class = "localfoto">Imagem</div>
+  </div>
+</div>
+<div class="footer">
+  <h2>Rodapé</h2>
+</div>
+
+</body>
+</html>
